@@ -1,7 +1,7 @@
-const Order = require('../models/orderModel');
-const Product = require('../models/productModel');
+import Order from '../models/orderModel.js';
+import Product from '../models/productModel.js';
 
-exports.createOrder = async (req, res) => {
+export const createOrder = async (req, res) => {
   try {
     const {
       orderItems,
@@ -10,7 +10,7 @@ exports.createOrder = async (req, res) => {
       itemsPrice,
       taxPrice,
       shippingPrice,
-      totalPrice
+      totalPrice,
     } = req.body;
 
     const order = await Order.create({
@@ -21,7 +21,7 @@ exports.createOrder = async (req, res) => {
       taxPrice,
       shippingPrice,
       totalPrice,
-      user: req.user.id
+      user: req.user.id,
     });
 
     // Update product stock
@@ -33,17 +33,17 @@ exports.createOrder = async (req, res) => {
 
     res.status(201).json({
       success: true,
-      order
+      order,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: error.message
+      message: error.message,
     });
   }
 };
 
-exports.getOrderById = async (req, res) => {
+export const getOrderById = async (req, res) => {
   try {
     const order = await Order.findById(req.params.id)
       .populate('user', 'name email')
@@ -52,42 +52,42 @@ exports.getOrderById = async (req, res) => {
     if (!order) {
       return res.status(404).json({
         success: false,
-        message: 'Order not found'
+        message: 'Order not found',
       });
     }
 
     res.status(200).json({
       success: true,
-      order
+      order,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: error.message
+      message: error.message,
     });
   }
 };
 
-exports.updateOrderStatus = async (req, res) => {
+export const updateOrderStatus = async (req, res) => {
   try {
     const order = await Order.findById(req.params.id);
 
     if (!order) {
       return res.status(404).json({
         success: false,
-        message: 'Order not found'
+        message: 'Order not found',
       });
     }
 
     if (order.orderStatus === 'Delivered') {
       return res.status(400).json({
         success: false,
-        message: 'Order has already been delivered'
+        message: 'Order has already been delivered',
       });
     }
 
     order.orderStatus = req.body.status;
-    
+
     if (req.body.status === 'Delivered') {
       order.deliveredAt = Date.now();
     }
@@ -96,12 +96,12 @@ exports.updateOrderStatus = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      order
+      order,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: error.message
+      message: error.message,
     });
   }
-}; 
+};
