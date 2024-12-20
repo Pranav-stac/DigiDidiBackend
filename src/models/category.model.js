@@ -16,6 +16,11 @@ const categorySchema = new mongoose.Schema(
       public_id: String,
       url: String,
     },
+    // to create a sub-category
+    parentCategoryId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Category',
+    },
   },
   { timestamps: true }
 );
