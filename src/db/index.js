@@ -1,13 +1,17 @@
-import { connect } from 'mongoose';
-import { app } from '../app.js';
+import app from '../app.js';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-export const connectMongoDB = async () => {
+dotenv.config();
+
+const connectDB = async () => {
   try {
-    await connect(`${process.env.MONGODB_URI}`);
-    app.listen(process.env.PORT, () => {
-      console.log(`Server is Listening at Port : ${process.env.PORT}`);
-    });
-  } catch (e) {
-    console.error('Failed to connect MongoDB Error: ', e);
+    const conn = await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/digididi');
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+    process.exit(1);
   }
 };
+
+export { connectDB };

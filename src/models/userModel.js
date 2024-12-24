@@ -9,20 +9,29 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: [true, 'Please enter your email'],
     unique: true,
+    sparse: true,
     validate: {
       validator: function (v) {
-        return /\S+@\S+\.\S+/.test(v);
+        return !v || /\S+@\S+\.\S+/.test(v);
       },
       message: 'Please enter valid email',
     },
   },
-  password: {
+  phoneNumber: {
     type: String,
-    required: [true, 'Please enter your password'],
-    minLength: [6, 'Password should be at least 6 characters'],
-    select: false,
+    required: [true, 'Please enter your phone number'],
+    unique: true,
+    validate: {
+      validator: function(v) {
+        return /^[0-9]{10}$/.test(v);
+      },
+      message: 'Please enter valid 10-digit phone number'
+    }
+  },
+  isPhoneVerified: {
+    type: Boolean,
+    default: false
   },
   role: {
     type: String,
@@ -33,7 +42,14 @@ const userSchema = new mongoose.Schema({
     public_id: String,
     url: String,
   },
-  phoneNumber: String,
+  addresses: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Address'
+  }],
+  defaultAddress: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Address'
+  },
   createdAt: {
     type: Date,
     default: Date.now,

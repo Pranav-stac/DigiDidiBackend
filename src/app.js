@@ -1,40 +1,41 @@
 import express from 'express';
 import cors from 'cors';
-import morgan from 'morgan';
-import {
-  userRoutes,
-  productRoutes,
-  orderRoutes,
-  categoryRoutes,
-  cartRoutes,
-} from './routes/index.js';
+import dotenv from 'dotenv';
+import authRoutes from './routes/authRoutes.js';
+import categoryRoutes from './routes/categoryRoutes.js';
+import productRoutes from './routes/productRoutes.js';
+import cartRoutes from './routes/cartRoutes.js';
+
+dotenv.config();
 
 const app = express();
 
+// Middleware
+app.use(cors());
 app.use(express.json());
-app.use(
-  cors({
-    origin: '*',
-  })
-);
-app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
-  console.log(`Received ${req.method} request for ${req.url}`);
-  next();
-});
+// Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/categories', categoryRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/cart', cartRoutes);
 
-app.use('/api/v1/users', userRoutes);
-app.use('/api/v1/products', productRoutes);
-app.use('/api/v1/orders', orderRoutes);
-app.use('/api/v1/cart', cartRoutes);
-app.use('/api/v1/categories', categoryRoutes);
-
-app.use((err, req, res, next) => {
-  res.status(err.status || 500).json({
-    success: false,
-    message: err.message || 'Internal Server Error',
+// Health check route
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Server is healthy'
   });
 });
 
-export { app };
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({
+    success: false,
+    message: 'Something went wrong!'
+  });
+});
+
+export default app;
