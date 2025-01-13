@@ -1,20 +1,24 @@
-import { Router } from 'express';
-import { protect, authorizeRoles } from '../middleware/auth.js';
+import express from 'express';
+import { isAuthenticated } from '../middleware/auth.js';
 import {
   createOrder,
-  getOrderById,
-  updateOrderStatus,
+  getOrderDetails,
+  myOrders,
+  updatePaymentStatus
 } from '../controllers/orderController.js';
 
-const router = Router();
+const router = express.Router();
 
-router.post('/', protect, createOrder);
-router.get('/:id', protect, getOrderById);
-router.put(
-  '/:id/status',
-  protect,
-  authorizeRoles('admin', 'merchant'),
-  updateOrderStatus
-);
+// Create new order
+router.post('/create', isAuthenticated, createOrder);
+
+// Get order details
+router.get('/details/:id', isAuthenticated, getOrderDetails);
+
+// Get logged in user orders
+router.get('/my-orders', isAuthenticated, myOrders);
+
+// Update payment status
+router.post('/payment/update', isAuthenticated, updatePaymentStatus);
 
 export default router;
