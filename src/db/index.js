@@ -9,10 +9,7 @@ const connectDB = async () => {
       process.env.MONGODB_URI ||
       process.env.MONGO_URI ||
       'mongodb://localhost:27017/digididi';
-    const conn = await mongoose.connect(mongoURI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    const conn = await mongoose.connect(mongoURI);
 
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
