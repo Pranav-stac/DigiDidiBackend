@@ -46,7 +46,7 @@ export const checkUserExists = async (req, res) => {
   try {
     const { phoneNumber } = req.body;
     const exists = await User.exists({ phoneNumber });
-    
+
     res.json({
       success: true,
       exists: !!exists,
@@ -63,7 +63,7 @@ export const checkUserExists = async (req, res) => {
 export const registerUser = async (req, res) => {
   try {
     const { name, phoneNumber } = req.body;
-    
+
     const user = await User.create({
       name,
       phoneNumber,
@@ -89,7 +89,7 @@ export const registerUser = async (req, res) => {
 export const loginUser = async (req, res) => {
   try {
     const { phoneNumber } = req.body;
-    
+
     const user = await User.findOne({ phoneNumber });
     if (!user) {
       return res.status(401).json({
@@ -233,4 +233,19 @@ export const getUserAddresses = async (req, res) => {
       message: error.message,
     });
   }
-}; 
+};
+
+export const getAllUsersProfile = async (req, res) => {
+  try {
+    const users = await User.find().populate('addresses');
+    res.json({
+      success: true,
+      users,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};

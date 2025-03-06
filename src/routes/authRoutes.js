@@ -11,6 +11,7 @@ import {
   getUserAddresses,
   verifyPhone,
   checkUserExists,
+  getAllUsersProfile,
 } from '../controllers/authController.js';
 
 const router = express.Router();
@@ -24,9 +25,10 @@ router.get('/logout', logout);
 
 // Protected routes
 router.get('/profile', isAuthenticated, getUserProfile);
+router.get('/profiles', isAuthenticated, getAllUsersProfile);
 router.put('/profile', isAuthenticated, updateProfile);
 router.post('/address', isAuthenticated, addAddress);
 router.delete('/address/:id', isAuthenticated, deleteAddress);
 router.get('/addresses', isAuthenticated, getUserAddresses);
 
-export default router; 
+export default router;

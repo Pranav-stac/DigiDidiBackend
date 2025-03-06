@@ -4,7 +4,7 @@ import {
   createOrder,
   getOrderDetails,
   myOrders,
-  updatePaymentStatus
+  updatePaymentStatus,
 } from '../controllers/orderController.js';
 
 const router = express.Router();
@@ -20,5 +20,8 @@ router.get('/my-orders', isAuthenticated, myOrders);
 
 // Update payment status
 router.post('/payment/update', isAuthenticated, updatePaymentStatus);
+
+// Get all order - ADMIN
+router.get('/', isAuthenticated, authorizeRoles('admin'), getAllOrders);
 
 export default router;
