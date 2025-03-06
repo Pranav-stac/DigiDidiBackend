@@ -5,6 +5,7 @@ import {
   getOrderDetails,
   myOrders,
   updatePaymentStatus,
+  getAllOrders
 } from '../controllers/orderController.js';
 
 const router = express.Router();
