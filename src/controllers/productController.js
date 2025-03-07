@@ -1,9 +1,62 @@
 import Product from '../models/productModel.js';
+import Category from '../models/categoryModel.js';
+import cloudinary from '../utils/cloudinary.js';
+import fs from 'fs';
 
 export const createProduct = async (req, res) => {
   try {
-    req.body.merchant = req.user.id;
-    const product = await Product.create(req.body);
+    const {
+      productName,
+      productDescription,
+      productPrice,
+      productCategory,
+      productStock,
+    } = req.body;
+
+    if (!req.file) {
+      return res
+        .status(400)
+        .json({ success: false, message: 'No image uploaded.' });
+    }
+
+    const merchant = req.user.id;
+
+    const category = await Category.findOne({
+      name: { $regex: `^${productCategory}$`, $options: 'i' },
+    });
+
+    if (!category) {
+      return res.status(404).json({
+        success: false,
+        message: 'Category not found',
+      });
+    }
+
+    // from upload folders getting file path
+    const filePath = req.file.path;
+
+    const result = await cloudinary.uploader.upload(filePath, {
+      folder: 'products',
+    });
+
+    fs.unlink(filePath, (err) => {
+      if (err) console.error('Error deleting file:', err);
+    });
+
+    const product = await Product.create({
+      name: productName,
+      description: productDescription,
+      price: productPrice,
+      category: category._id,
+      stock: productStock,
+      images: [
+        {
+          public_id: result.public_id,
+          url: result.secure_url,
+        },
+      ],
+      merchant,
+    });
 
     res.status(201).json({
       success: true,
