@@ -24,6 +24,8 @@ app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
 
+app.use("/public", express.static("public"));
+
 // Health check route
 app.get('/health', (req, res) => {
   res.status(200).json({

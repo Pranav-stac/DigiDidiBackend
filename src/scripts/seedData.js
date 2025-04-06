@@ -20,7 +20,7 @@ const categories = [
   {
     name: 'Local for Vocal',
     description: 'Local Products of the town or village',
-    imageUrl: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f',
+    imageUrl: 'public/local-category.png',
   },
 ];
 
@@ -128,7 +128,7 @@ const products = {
       images: [
         {
           public_id: 'bluetooth_speaker',
-          url: 'https://unsplash.com/photos/hpTH5b6mo2s',
+          url: 'public/bluetoothSpeaker.jpg',
         },
       ],
     },
@@ -141,23 +141,23 @@ const products = {
       images: [
         {
           public_id: 'wired_speaker',
-          url: 'https://unsplash.com/photos/nBuiLbz_j4A',
+          url: 'public/wiredspeakers.jpg',
         },
       ],
     },
-    {
-      name: 'Wireless Speaker',
-      subcategory: 'Speakers',
-      description: 'Compact and powerful wireless speaker',
-      price: 699,
-      stock: 90,
-      images: [
-        {
-          public_id: 'wireless_speaker',
-          url: 'https://unsplash.com/photos/W9hcfmLZdyk',
-        },
-      ],
-    },
+    // {
+    //   name: 'Wireless Speaker',
+    //   subcategory: 'Speakers',
+    //   description: 'Compact and powerful wireless speaker',
+    //   price: 699,
+    //   stock: 90,
+    //   images: [
+    //     {
+    //       public_id: 'wireless_speaker',
+    //       url: 'https://unsplash.com/photos/W9hcfmLZdyk',
+    //     },
+    //   ],
+    // },
     {
       name: 'Earbuds',
       subcategory: 'Earphones',
@@ -167,7 +167,7 @@ const products = {
       images: [
         {
           public_id: 'earbuds',
-          url: 'https://unsplash.com/photos/Me9ySk1hxEw',
+          url: 'public/Earbuds.jpg',
         },
       ],
     },
@@ -180,7 +180,7 @@ const products = {
       images: [
         {
           public_id: 'wired_earphones',
-          url: 'https://unsplash.com/photos/JRjE2W6m8Uo',
+          url: 'public/wired.jpg',
         },
       ],
     },
@@ -193,7 +193,7 @@ const products = {
       images: [
         {
           public_id: 'neckband_earphones',
-          url: 'https://unsplash.com/photos/EXPr9yckGYE',
+          url: 'public/neckband.jpg',
         },
       ],
     },
@@ -206,7 +206,7 @@ const products = {
       images: [
         {
           public_id: 'headphones',
-          url: 'https://unsplash.com/photos/R4rMy7SOrZU',
+          url: 'public/headphones.jpg',
         },
       ],
     },
@@ -219,7 +219,7 @@ const products = {
       images: [
         {
           public_id: 'power_bank_10k',
-          url: 'https://unsplash.com/photos/ZXkxAysjAUc',
+          url: 'public/10kPowerbank.jpg',
         },
       ],
     },
@@ -232,7 +232,7 @@ const products = {
       images: [
         {
           public_id: 'power_bank_20k',
-          url: 'https://unsplash.com/photos/NLsh70wZ-mY',
+          url: 'public/20kMah.jpeg',
         },
       ],
     },
@@ -245,7 +245,7 @@ const products = {
       images: [
         {
           public_id: 'solar_power_bank',
-          url: 'https://unsplash.com/photos/UpF2ouaE4n8',
+          url: 'public/solar-pb.jpeg',
         },
       ],
     },
@@ -258,7 +258,7 @@ const products = {
       images: [
         {
           public_id: 'charging_cable',
-          url: 'https://unsplash.com/photos/zPK_Amvhnr0',
+          url: 'public/ctypeCable.jpg',
         },
       ],
     },
@@ -271,7 +271,7 @@ const products = {
       images: [
         {
           public_id: 'adaptors',
-          url: 'https://unsplash.com/photos/kJj5UIc1t4I',
+          url: 'public/adapter.jpg',
         },
       ],
     },
@@ -284,7 +284,7 @@ const products = {
       images: [
         {
           public_id: 'smart_watch_basic',
-          url: 'https://unsplash.com/photos/CBotbUogXDA',
+          url: 'public/basicSW.jpg',
         },
       ],
     },
@@ -297,7 +297,7 @@ const products = {
       images: [
         {
           public_id: 'smart_watch_bluetooth',
-          url: 'https://unsplash.com/photos/mXG9jGZlX2g',
+          url: 'public/bluetoothcallSW.jpg',
         },
       ],
     },
