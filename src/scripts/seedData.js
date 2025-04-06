@@ -10,12 +10,12 @@ const categories = [
   {
     name: 'Hygiene',
     description: 'Personal care and hygiene products',
-    imageUrl: 'public/uploads/hygiene-category.jpeg',
+    imageUrl: 'public/hygiene-category.jpeg',
   },
   {
     name: 'Consumer Electronics',
     description: 'Electronic gadgets and accessories',
-    imageUrl: 'public/uploads/electronics-category.jpeg',
+    imageUrl: 'public/electronics-category.jpeg',
   },
   {
     name: 'Local for Vocal',
@@ -35,7 +35,7 @@ const products = {
       images: [
         {
           public_id: 'hygiene_sanitary_pads',
-          url: 'public/uploads/pads.jpeg',
+          url: 'public/pads.jpeg',
         },
       ],
     },
@@ -48,7 +48,7 @@ const products = {
       images: [
         {
           public_id: 'hygiene_tampons_cup',
-          url: 'public/uploads/cups.jpeg',
+          url: 'public/cups.jpeg',
         },
       ],
     },
@@ -61,7 +61,7 @@ const products = {
       images: [
         {
           public_id: 'hygiene_period_panties',
-          url: 'public/uploads/period-panties.jpeg',
+          url: 'public/period-panties.jpeg',
         },
       ],
     },
@@ -74,7 +74,7 @@ const products = {
       images: [
         {
           public_id: 'hygiene_period_pain_relief',
-          url: 'public/uploads/period-pain.jpeg',
+          url: 'public/period-pain.jpeg',
         },
       ],
     },
@@ -87,7 +87,7 @@ const products = {
       images: [
         {
           public_id: 'hygiene_intimate_wash',
-          url: 'public/uploads/intimate-wash.jpeg',
+          url: 'public/intimate-wash.jpeg',
         },
       ],
     },
@@ -100,7 +100,7 @@ const products = {
       images: [
         {
           public_id: 'hygiene_hair_removal',
-          url: 'public/uploads/hair-removal.jpeg',
+          url: 'public/hair-removal.jpeg',
         },
       ],
     },
@@ -113,7 +113,7 @@ const products = {
       images: [
         {
           public_id: 'hygiene_mom_care',
-          url: 'public/uploads/mom-care.jpeg',
+          url: 'public/mom-care.jpeg',
         },
       ],
     },
