@@ -22,6 +22,11 @@ const categories = [
     description: 'Local Products of the town or village',
     imageUrl: 'public/local-category.png',
   },
+  {
+    name: 'Healthcare',
+    description: 'Healthcare products and supplements',
+    imageUrl: 'public/local-category.png',
+  },
 ];
 
 const products = {
@@ -114,6 +119,190 @@ const products = {
         {
           public_id: 'hygiene_mom_care',
           url: 'public/mom-care.jpeg',
+        },
+      ],
+    },
+  ],
+  Healthcare: [
+    {
+      name: 'Pulse Oxymeter',
+      subcategory: 'Diagnostic and monitoring',
+      description: 'Accurate pulse oximeter for monitoring oxygen levels',
+      price: 799,
+      stock: 100,
+      images: [
+        {
+          public_id: 'pulse_oxymeter',
+          url: 'public/pulseOxy.jpg',
+        },
+      ],
+    },
+    {
+      name: 'Thermometers',
+      subcategory: 'Diagnostic and monitoring',
+      description: 'Digital thermometers for quick and reliable readings',
+      price: 249,
+      stock: 150,
+      images: [
+        {
+          public_id: 'thermometers',
+          url: 'public/thermometer.jpg',
+        },
+      ],
+    },
+    {
+      name: 'BP Monitors',
+      subcategory: 'Diagnostic and monitoring',
+      description: 'Electronic blood pressure monitors for home use',
+      price: 1299,
+      stock: 75,
+      images: [
+        {
+          public_id: 'bp_monitors',
+          url: 'public/bpMonitor.jpg',
+        },
+      ],
+    },
+    {
+      name: 'Glucometer',
+      subcategory: 'Diagnostic and monitoring',
+      description: 'Easy-to-use glucometers for blood sugar tracking',
+      price: 899,
+      stock: 80,
+      images: [
+        {
+          public_id: 'glucometer',
+          url: 'public/glucometer.jpg',
+        },
+      ],
+    },
+    {
+      name: 'Portable ECG',
+      subcategory: 'Diagnostic and monitoring',
+      description: 'Handheld ECG monitor for heart health tracking',
+      price: 1999,
+      stock: 40,
+      images: [
+        {
+          public_id: 'portable_ecg',
+          url: 'public/portableECG.jpg',
+        },
+      ],
+    },
+    {
+      name: 'Fitness Trackers',
+      subcategory: 'Wearable',
+      description: 'Track your steps, heart rate and more',
+      price: 1499,
+      stock: 90,
+      images: [
+        {
+          public_id: 'fitness_trackers',
+          url: 'public/fitnesstracker.jpg',
+        },
+      ],
+    },
+    {
+      name: 'Smart Rings',
+      subcategory: 'Wearable',
+      description: 'Advanced health tracking smart rings',
+      price: 2499,
+      stock: 60,
+      images: [
+        {
+          public_id: 'smart_rings',
+          url: 'public/smartrings.jpg',
+        },
+      ],
+    },
+    // {
+    //   name: 'Smart Bands',
+    //   subcategory: 'Wearable',
+    //   description: 'Wearable smart bands for fitness and health tracking',
+    //   price: 999,
+    //   stock: 100,
+    //   images: [
+    //     {
+    //       public_id: 'smart_bands',
+    //       url: 'public/smart-band.jpeg',
+    //     },
+    //   ],
+    // },
+    {
+      name: 'Nebulisers',
+      subcategory: 'Respiratory care',
+      description: 'Effective nebulisers for respiratory therapy',
+      price: 1299,
+      stock: 70,
+      images: [
+        {
+          public_id: 'nebulisers',
+          url: 'public/nebulizers.jpg',
+        },
+      ],
+    },
+    {
+      name: 'Inhalers',
+      subcategory: 'Respiratory care',
+      description: 'Quick-relief inhalers for asthma and allergies',
+      price: 399,
+      stock: 90,
+      images: [
+        {
+          public_id: 'inhalers',
+          url: 'public/inhalers.jpg',
+        },
+      ],
+    },
+    {
+      name: 'Digital Pregnancy Tests',
+      subcategory: "Women's Health",
+      description: 'Accurate and fast digital pregnancy test kits',
+      price: 299,
+      stock: 120,
+      images: [
+        {
+          public_id: 'digital_pregnancy_tests',
+          url: 'public/pregnancyTests.jpg',
+        },
+      ],
+    },
+    {
+      name: 'BreastPumps',
+      subcategory: "Women's Health",
+      description: 'Comfortable and efficient breast pumps for mothers',
+      price: 1599,
+      stock: 40,
+      images: [
+        {
+          public_id: 'breast_pumps',
+          url: 'public/breastpumps.jpg',
+        },
+      ],
+    },
+    {
+      name: 'TENS Machine',
+      subcategory: 'Pain and Muscle relief',
+      description: 'TENS machine for natural pain relief and muscle therapy',
+      price: 1499,
+      stock: 60,
+      images: [
+        {
+          public_id: 'tens_machine',
+          url: 'public/TENSmachine.jpg',
+        },
+      ],
+    },
+    {
+      name: 'Infrared heating pad',
+      subcategory: 'Pain and Muscle relief',
+      description: 'Infrared heating pad for deep tissue relief',
+      price: 999,
+      stock: 100,
+      images: [
+        {
+          public_id: 'infrared_heating_pad',
+          url: 'public/infraredpads.png',
         },
       ],
     },
