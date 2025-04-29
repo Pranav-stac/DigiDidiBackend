@@ -18,7 +18,7 @@ const categories = [
     imageUrl: 'public/electronics-category.jpeg',
   },
   {
-    name: 'Local for Vocal',
+    name: 'Vocal for Local',
     description: 'Local Products of the town or village',
     imageUrl: 'public/local-category.png',
   },
@@ -125,7 +125,7 @@ const products = {
   ],
   Healthcare: [
     {
-      name: 'Pulse Oxymeter',
+      name: 'MRR Pulse Oxymeter',
       subcategory: 'Diagnostic and monitoring',
       description: 'Accurate pulse oximeter for monitoring oxygen levels',
       price: 799,
@@ -138,7 +138,7 @@ const products = {
       ],
     },
     {
-      name: 'Thermometers',
+      name: 'MRR Thermometers',
       subcategory: 'Diagnostic and monitoring',
       description: 'Digital thermometers for quick and reliable readings',
       price: 249,
@@ -151,7 +151,7 @@ const products = {
       ],
     },
     {
-      name: 'BP Monitors',
+      name: 'MRR BP Monitors',
       subcategory: 'Diagnostic and monitoring',
       description: 'Electronic blood pressure monitors for home use',
       price: 1299,
@@ -164,7 +164,7 @@ const products = {
       ],
     },
     {
-      name: 'Glucometer',
+      name: 'MRR Glucometer',
       subcategory: 'Diagnostic and monitoring',
       description: 'Easy-to-use glucometers for blood sugar tracking',
       price: 899,
@@ -177,7 +177,7 @@ const products = {
       ],
     },
     {
-      name: 'Portable ECG',
+      name: 'MRR Portable ECG',
       subcategory: 'Diagnostic and monitoring',
       description: 'Handheld ECG monitor for heart health tracking',
       price: 1999,
@@ -190,7 +190,7 @@ const products = {
       ],
     },
     {
-      name: 'Fitness Trackers',
+      name: 'MRR Fitness Trackers',
       subcategory: 'Wearable',
       description: 'Track your steps, heart rate and more',
       price: 1499,
@@ -203,7 +203,7 @@ const products = {
       ],
     },
     {
-      name: 'Smart Rings',
+      name: 'MRR Smart Rings',
       subcategory: 'Wearable',
       description: 'Advanced health tracking smart rings',
       price: 2499,
@@ -229,7 +229,7 @@ const products = {
     //   ],
     // },
     {
-      name: 'Nebulisers',
+      name: 'MRR Nebulisers',
       subcategory: 'Respiratory care',
       description: 'Effective nebulisers for respiratory therapy',
       price: 1299,
@@ -242,7 +242,7 @@ const products = {
       ],
     },
     {
-      name: 'Inhalers',
+      name: 'MRR Inhalers',
       subcategory: 'Respiratory care',
       description: 'Quick-relief inhalers for asthma and allergies',
       price: 399,
@@ -255,7 +255,7 @@ const products = {
       ],
     },
     {
-      name: 'Digital Pregnancy Tests',
+      name: 'MRR Digital Pregnancy Tests',
       subcategory: "Women's Health",
       description: 'Accurate and fast digital pregnancy test kits',
       price: 299,
@@ -268,7 +268,7 @@ const products = {
       ],
     },
     {
-      name: 'BreastPumps',
+      name: 'MRR BreastPumps',
       subcategory: "Women's Health",
       description: 'Comfortable and efficient breast pumps for mothers',
       price: 1599,
@@ -281,7 +281,7 @@ const products = {
       ],
     },
     {
-      name: 'TENS Machine',
+      name: 'MRR TENS Machine',
       subcategory: 'Pain and Muscle relief',
       description: 'TENS machine for natural pain relief and muscle therapy',
       price: 1499,
@@ -294,7 +294,7 @@ const products = {
       ],
     },
     {
-      name: 'Infrared heating pad',
+      name: 'MRR Infrared heating pad',
       subcategory: 'Pain and Muscle relief',
       description: 'Infrared heating pad for deep tissue relief',
       price: 999,
@@ -309,7 +309,7 @@ const products = {
   ],
   'Consumer Electronics': [
     {
-      name: 'Bluetooth Speaker',
+      name: 'Rooh Bluetooth Speaker',
       subcategory: 'Speakers',
       description: 'Portable Bluetooth speaker with high-quality sound',
       price: 999,
@@ -322,7 +322,7 @@ const products = {
       ],
     },
     {
-      name: 'Wired Speaker',
+      name: 'Rooh Wired Speaker',
       subcategory: 'Speakers',
       description: 'High-quality wired speakers for home entertainment',
       price: 499,
@@ -348,7 +348,7 @@ const products = {
     //   ],
     // },
     {
-      name: 'Earbuds',
+      name: 'Rooh Earbuds',
       subcategory: 'Earphones',
       description: 'True wireless earbuds with noise cancellation',
       price: 499,
@@ -361,7 +361,7 @@ const products = {
       ],
     },
     {
-      name: 'Wired Earphones',
+      name: 'Rooh Wired Earphones',
       subcategory: 'Earphones',
       description: 'Comfortable wired earphones with clear sound',
       price: 149,
@@ -374,7 +374,7 @@ const products = {
       ],
     },
     {
-      name: 'Neckband Earphones',
+      name: 'Rooh Neckband Earphones',
       subcategory: 'Earphones',
       description: 'Stylish neckband with deep bass',
       price: 299,
@@ -387,7 +387,7 @@ const products = {
       ],
     },
     {
-      name: 'Headphones',
+      name: 'Rooh Headphones',
       subcategory: 'Headphones',
       description: 'Over-ear headphones with immersive sound',
       price: 1399,
@@ -400,7 +400,7 @@ const products = {
       ],
     },
     {
-      name: 'Power Bank 10k mAh',
+      name: 'Rooh Power Bank 10k mAh',
       subcategory: 'Power Bank',
       description: 'Compact and fast-charging 10000mAh power bank',
       price: 599,
@@ -413,7 +413,7 @@ const products = {
       ],
     },
     {
-      name: 'Power Bank 20k mAh',
+      name: 'Rooh Power Bank 20k mAh',
       subcategory: 'Power Bank',
       description: 'High-capacity 20000mAh power bank',
       price: 1199,
@@ -426,7 +426,7 @@ const products = {
       ],
     },
     {
-      name: 'Solar Power Bank',
+      name: 'Rooh Solar Power Bank',
       subcategory: 'Power Bank',
       description: 'Eco-friendly solar-powered power bank',
       price: 1999,
@@ -439,7 +439,7 @@ const products = {
       ],
     },
     {
-      name: 'Charging Cables',
+      name: 'Rooh Charging Cables',
       subcategory: 'Charger',
       description: 'Durable and fast-charging USB-C cable',
       price: 199,
@@ -452,7 +452,7 @@ const products = {
       ],
     },
     {
-      name: 'Adaptors',
+      name: 'Rooh Adaptors',
       subcategory: 'Charger',
       description: 'Reliable charging adaptors for multiple devices',
       price: 199,
@@ -465,7 +465,7 @@ const products = {
       ],
     },
     {
-      name: 'Smart Watch Basic',
+      name: 'Rooh Smart Watch Basic',
       subcategory: 'Smart Watch',
       description: 'Entry-level smartwatch with essential features',
       price: 999,
@@ -478,7 +478,7 @@ const products = {
       ],
     },
     {
-      name: 'Smart Watch Bluetooth Calling',
+      name: 'Rooh Smart Watch Bluetooth Calling',
       subcategory: 'Smart Watch',
       description: 'Advanced smartwatch with Bluetooth calling feature',
       price: 1499,
