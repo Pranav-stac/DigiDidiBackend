@@ -32,7 +32,7 @@ const categories = [
 const products = {
   Hygiene: [
     {
-      name: 'Sanitary Pads',
+      name: 'Purpl Sanitary Pads',
       subcategory: 'Feminine Hygiene',
       description: 'Soft and absorbent sanitary pads for all-day comfort',
       price: 100,
@@ -45,7 +45,7 @@ const products = {
       ],
     },
     {
-      name: 'Tampons & Menstrual Cup',
+      name: 'Purpl Tampons & Menstrual Cup',
       subcategory: 'Feminine Hygiene',
       description: 'Eco-friendly menstrual cups and tampons for safe usage',
       price: 150,
@@ -58,7 +58,7 @@ const products = {
       ],
     },
     {
-      name: 'Period Panties',
+      name: 'Purpl Period Panties',
       subcategory: 'Feminine Hygiene',
       description: 'Comfortable period panties for leak protection',
       price: 120,
@@ -66,12 +66,12 @@ const products = {
       images: [
         {
           public_id: 'hygiene_period_panties',
-          url: 'public/period-panties.jpeg',
+          url: 'public/period-panties.jpg',
         },
       ],
     },
     {
-      name: 'Period Pain Relief',
+      name: 'Purpl Period Pain Relief',
       subcategory: 'Health Care',
       description: 'Effective relief solutions for period pain',
       price: 99,
@@ -84,7 +84,7 @@ const products = {
       ],
     },
     {
-      name: 'Intimate wash & care',
+      name: 'Purpl Intimate wash & care',
       subcategory: 'Feminine Hygiene',
       description: 'Gentle care products for intimate hygiene',
       price: 199,
@@ -97,7 +97,7 @@ const products = {
       ],
     },
     {
-      name: 'Hair Removal',
+      name: 'Purpl Hair Removal',
       subcategory: 'Personal Grooming',
       description: 'Hair removal products for smooth skin',
       price: 199,
@@ -110,7 +110,7 @@ const products = {
       ],
     },
     {
-      name: 'Mom care',
+      name: 'Purpl Mom care',
       subcategory: 'Maternal Care',
       description: 'Specialized products for moms',
       price: 0,
